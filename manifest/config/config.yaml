@@ -1,0 +1,19 @@
+server:
+  address:     ":9999"
+  openapiPath: "/api.json"
+  swaggerPath: "/swagger"
+
+# 数据库连接配置
+database:
+  logger:
+    path:    "logs/sql"
+    level:   "all"
+    stdout:  true
+    ctxKeys: ["RequestId"]
+
+  default:
+    link:   "mysql:root:123456@tcp(127.0.0.1:3306)/gfdb"
+    #    link:   "sqlite::@file(manifest/document/sqlite/focus.db)"
+    debug:  true
+
+

@@ -1,0 +1,491 @@
+2023-01-20 00:16:17.022 [ERRO] {28610691fcc13b17e1b6b53bd374a295} [  8 ms] [default] [gfdb] [rows:0  ] SHOW FULL COLUMNS FROM `gf_rotation`
+Error: Error 1146: Table 'gfdb.gf_rotation' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.3.1/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameCreated
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:50
+13. github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:258
+14. github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:202
+15. demo02/internal/logic/rotation.(*sRotation).Create
+    D:/gocode03/demo02/internal/logic/rotation/rotation.go:26
+16. demo02/internal/controller.(*cRotation).Create
+    D:/gocode03/demo02/internal/controller/rotation.go:17
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:152
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:129
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:75
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:55
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:54
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_server_handler.go:132
+
+2023-01-20 00:16:17.033 [ERRO] {28610691fcc13b17e1b6b53bd374a295} [  1 ms] [default] [gfdb] [rows:0  ] SHOW FULL COLUMNS FROM `gf_rotation`
+Error: Error 1146: Table 'gfdb.gf_rotation' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.3.1/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameUpdated
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:71
+13. github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:259
+14. github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:202
+15. demo02/internal/logic/rotation.(*sRotation).Create
+    D:/gocode03/demo02/internal/logic/rotation/rotation.go:26
+16. demo02/internal/controller.(*cRotation).Create
+    D:/gocode03/demo02/internal/controller/rotation.go:17
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:152
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:129
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:75
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:55
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:54
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_server_handler.go:132
+
+2023-01-20 00:16:17.041 [ERRO] {28610691fcc13b17e1b6b53bd374a295} [  2 ms] [default] [gfdb] [rows:0  ] SHOW FULL COLUMNS FROM `gf_rotation`
+Error: Error 1146: Table 'gfdb.gf_rotation' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.3.1/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Core).mappingAndFilterData
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_structure.go:332
+11. github.com/gogf/gf/v2/database/gdb.(*Model).doMappingAndFilterForInsertOrUpdateDataMap
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:119
+12. github.com/gogf/gf/v2/database/gdb.(*Model).filterDataForInsertOrUpdate
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:108
+13. github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:261
+14. github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:202
+15. demo02/internal/logic/rotation.(*sRotation).Create
+    D:/gocode03/demo02/internal/logic/rotation/rotation.go:26
+16. demo02/internal/controller.(*cRotation).Create
+    D:/gocode03/demo02/internal/controller/rotation.go:17
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:152
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:129
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:75
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:55
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:54
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_server_handler.go:132
+
+2023-01-20 13:30:51.523 [ERRO] {d8a159a758ed3b1735aff465339cbcc0} [  4 ms] [default] [gfdb] [rows:0  ] SHOW FULL COLUMNS FROM `gf_rotation`
+Error: Error 1146: Table 'gfdb.gf_rotation' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.3.1/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameCreated
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:50
+13. github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:258
+14. github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:202
+15. demo02/internal/logic/rotation.(*sRotation).Create
+    D:/gocode03/demo02/internal/logic/rotation/rotation.go:26
+16. demo02/internal/controller.(*cRotation).Create
+    D:/gocode03/demo02/internal/controller/rotation.go:17
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:152
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:129
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:75
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:55
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:54
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_server_handler.go:132
+
+2023-01-20 13:30:51.530 [ERRO] {d8a159a758ed3b1735aff465339cbcc0} [  1 ms] [default] [gfdb] [rows:0  ] SHOW FULL COLUMNS FROM `gf_rotation`
+Error: Error 1146: Table 'gfdb.gf_rotation' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.3.1/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Model).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:38
+11. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldName
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:98
+12. github.com/gogf/gf/v2/database/gdb.(*Model).getSoftFieldNameUpdated
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_time.go:71
+13. github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:259
+14. github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:202
+15. demo02/internal/logic/rotation.(*sRotation).Create
+    D:/gocode03/demo02/internal/logic/rotation/rotation.go:26
+16. demo02/internal/controller.(*cRotation).Create
+    D:/gocode03/demo02/internal/controller/rotation.go:17
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:152
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:129
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:75
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:55
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:54
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_server_handler.go:132
+
+2023-01-20 13:30:51.535 [ERRO] {d8a159a758ed3b1735aff465339cbcc0} [  1 ms] [default] [gfdb] [rows:0  ] SHOW FULL COLUMNS FROM `gf_rotation`
+Error: Error 1146: Table 'gfdb.gf_rotation' doesn't exist
+Stack:
+1.  github.com/gogf/gf/v2/database/gdb.(*Core).writeSqlToLogger
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:663
+2.  github.com/gogf/gf/v2/database/gdb.(*Core).DoCommit
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:278
+3.  github.com/gogf/gf/v2/database/gdb.(*Core).DoQuery
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_underlying.go:74
+4.  github.com/gogf/gf/v2/database/gdb.(*Core).DoSelect
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core.go:144
+5.  github.com/gogf/gf/contrib/drivers/mysql/v2.(*Driver).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/contrib/drivers/mysql/v2@v2.3.1/mysql.go:148
+6.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:80
+7.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).doSetWithLockCheck
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:217
+8.  github.com/gogf/gf/v2/container/gmap.(*StrAnyMap).GetOrSetFuncLock
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/container/gmap/gmap_hash_str_any_map.go:254
+9.  github.com/gogf/gf/v2/database/gdb.(*DriverWrapperDB).TableFields
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_driver_wrapper_db.go:78
+10. github.com/gogf/gf/v2/database/gdb.(*Core).mappingAndFilterData
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_core_structure.go:332
+11. github.com/gogf/gf/v2/database/gdb.(*Model).doMappingAndFilterForInsertOrUpdateDataMap
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:119
+12. github.com/gogf/gf/v2/database/gdb.(*Model).filterDataForInsertOrUpdate
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_utility.go:108
+13. github.com/gogf/gf/v2/database/gdb.(*Model).doInsertWithOption
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:261
+14. github.com/gogf/gf/v2/database/gdb.(*Model).InsertAndGetId
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/database/gdb/gdb_model_insert.go:202
+15. demo02/internal/logic/rotation.(*sRotation).Create
+    D:/gocode03/demo02/internal/logic/rotation/rotation.go:26
+16. demo02/internal/controller.(*cRotation).Create
+    D:/gocode03/demo02/internal/controller/rotation.go:17
+17. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:152
+18. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+19. github.com/gogf/gf/v2/net/ghttp.(*middleware).callHandlerFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:129
+20. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:75
+21. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+22. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+23. github.com/gogf/gf/v2/net/ghttp.MiddlewareHandlerResponse
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_handler_response.go:25
+24. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:55
+25. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+26. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:54
+27. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+28. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+29. github.com/gogf/gf/v2/net/ghttp.internalMiddlewareServerTracing
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_middleware_tracing.go:78
+30. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1.5
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:96
+31. github.com/gogf/gf/v2/net/ghttp.niceCallFunc
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_func.go:55
+32. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next.func1
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:95
+33. github.com/gogf/gf/v2/util/gutil.TryCatch
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/util/gutil/gutil.go:56
+34. github.com/gogf/gf/v2/net/ghttp.(*middleware).Next
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_request_middleware.go:49
+35. github.com/gogf/gf/v2/net/ghttp.(*Server).ServeHTTP
+    D:/goproject/pkg/mod/github.com/gogf/gf/v2@v2.3.1/net/ghttp/ghttp_server_handler.go:132
+
+2023-01-20 13:31:57.474 [DEBU] {54e46c0268ed3b1736aff4658d0d8bfe} [  3 ms] [default] [gfdb] [rows:4  ] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 13:31:57.479 [DEBU] {54e46c0268ed3b1736aff4658d0d8bfe} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`link`,`sort`,`pic_url`) VALUES('https:xw.com',0,'https://xw.com') 
+2023-01-20 13:32:52.473 [DEBU] {102865d074ed3b1737aff46537e6ab62} [  6 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`link`,`sort`,`pic_url`) VALUES('https:xw.com',0,'https://xw.com') 
+2023-01-20 13:33:11.624 [DEBU] {f02f124679ed3b1738aff465423f2f0d} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`link`,`sort`) VALUES('https://xw.com','https:xw.com',0) 
+2023-01-20 13:33:24.155 [DEBU] {f04ed8307ced3b1739aff4656b18aa75} [  5 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`sort`,`link`) VALUES('https://xw.com',0,'https:xw.com') 
+2023-01-20 13:38:13.952 [DEBU] {101f2baabfed3b173aaff465d731f37b} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`link`,`sort`,`pic_url`) VALUES('https:xw.com',0,'https://xw.com') 
+2023-01-20 13:38:28.156 [DEBU] {24d0cdf8c2ed3b173baff465d8671e5b} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`link`,`sort`,`pic_url`) VALUES('https:xw.com',0,'https://xw.com') 
+2023-01-20 13:45:39.815 [DEBU] {64238c7927ee3b175eb7995cd95a04df} [  5 ms] [default] [gfdb] [rows:4  ] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 13:45:39.820 [DEBU] {64238c7927ee3b175eb7995cd95a04df} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`sort`,`link`) VALUES('https://xw.com',0,'https:xw.com') 
+2023-01-20 13:45:55.184 [DEBU] {104dce0d2bee3b175fb7995c31c2bd8e} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`pic_url`) VALUES(0,'https:xw.com','https://xw.com') 
+2023-01-20 13:52:13.040 [DEBU] {e4c3b30783ee3b1760b7995ccd517625} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`pic_url`) VALUES(0,'https:xw.com','https://xw.com') 
+2023-01-20 13:52:25.140 [DEBU] {00bbf4d885ee3b1761b7995cce913311} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`pic_url`) VALUES(0,'https:xw.com','https://xw.com') 
+2023-01-20 13:53:02.217 [DEBU] {201cec7a8eee3b17d08f7f06d3841f51} [  2 ms] [default] [gfdb] [rows:6  ] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 13:53:02.224 [DEBU] {201cec7a8eee3b17d08f7f06d3841f51} [  5 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`update_at`,`sort`,`link`,`create_at`) VALUES('https://xw.com','2023-01-20 13:53:02',0,'https:xw.com','2023-01-20 13:53:02') 
+2023-01-20 13:55:38.474 [DEBU] {745191dcb2ee3b174d406347d8efdf84} [  3 ms] [default] [gfdb] [rows:6  ] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 13:55:38.478 [DEBU] {745191dcb2ee3b174d406347d8efdf84} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`link`,`create_at`,`sort`,`pic_url`,`update_at`) VALUES('https:xw.com','2023-01-20 13:55:38',0,'https://xw.com','2023-01-20 13:55:38') 
+2023-01-20 13:55:58.784 [DEBU] {88c92797b7ee3b174e40634722a5f9d5} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`update_at`,`sort`,`link`,`create_at`) VALUES('https://xw.com','2023-01-20 13:55:58',0,'https:xw.com','2023-01-20 13:55:58') 
+2023-01-20 13:56:01.384 [DEBU] {7c9d1932b8ee3b174f406347955dd744} [  4 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`update_at`,`link`,`pic_url`,`create_at`,`sort`) VALUES('2023-01-20 13:56:01','https:xw.com','https://xw.com','2023-01-20 13:56:01',0) 
+2023-01-20 13:56:06.690 [DEBU] {3033796eb9ee3b175040634737844e0c} [  2 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`link`,`pic_url`,`sort`,`update_at`,`create_at`) VALUES('https:xw.com','https://xw.com',0,'2023-01-20 13:56:06','2023-01-20 13:56:06') 
+2023-01-20 13:56:08.609 [DEBU] {7c8bc6e0b9ee3b175140634786c8dc2a} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`create_at`,`pic_url`,`update_at`) VALUES(0,'https:xw.com','2023-01-20 13:56:08','https://xw.com','2023-01-20 13:56:08') 
+2023-01-20 14:03:32.348 [DEBU] {d813983121ef3b17524063479d46ede3} [  5 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`update_at`,`sort`,`link`,`create_at`) VALUES('https://xw.com','2023-01-20 14:03:32',0,'https:xw.com','2023-01-20 14:03:32') 
+2023-01-20 14:03:39.362 [DEBU] {581baed322ef3b17534063475c35e8f4} [  5 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`link`,`update_at`,`sort`,`create_at`) VALUES('https://xw.com','https:xw.com','2023-01-20 14:03:39',0,'2023-01-20 14:03:39') 
+2023-01-20 14:03:41.937 [DEBU] {e09f346d23ef3b17544063470976ae33} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`create_at`,`pic_url`,`link`,`update_at`) VALUES(0,'2023-01-20 14:03:41','https://xw.com','https:xw.com','2023-01-20 14:03:41') 
+2023-01-20 14:23:27.738 [DEBU] {28df808437f03b175420137474685690} [  2 ms] [default] [gfdb] [rows:0  ] [txid:1] BEGIN
+2023-01-20 14:23:27.741 [DEBU] {28df808437f03b175420137474685690} [  3 ms] [default] [gfdb] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 14:23:27.744 [DEBU] {28df808437f03b175420137474685690} [  3 ms] [default] [gfdb] [rows:1  ] [txid:1] UPDATE `gf_rotation` SET `delete_at`='2023-01-20 14:23:27' WHERE (`id`=6) AND `delete_at` IS NULL
+2023-01-20 14:23:27.747 [DEBU] {28df808437f03b175420137474685690} [  3 ms] [default] [gfdb] [rows:0  ] [txid:1] COMMIT
+2023-01-20 14:24:25.746 [DEBU] {7852240645f03b17552013748212d712} [  1 ms] [default] [gfdb] [rows:0  ] [txid:2] BEGIN
+2023-01-20 14:24:25.749 [DEBU] {7852240645f03b17552013748212d712} [  3 ms] [default] [gfdb] [rows:1  ] [txid:2] UPDATE `gf_rotation` SET `delete_at`='2023-01-20 14:24:25' WHERE (`id`=7) AND `delete_at` IS NULL
+2023-01-20 14:24:25.752 [DEBU] {7852240645f03b17552013748212d712} [  3 ms] [default] [gfdb] [rows:0  ] [txid:2] COMMIT
+2023-01-20 14:28:02.790 [DEBU] {0404ef8e77f03b17562013748b19326b} [  2 ms] [default] [gfdb] [rows:0  ] [txid:3] BEGIN
+2023-01-20 14:28:02.791 [DEBU] {0404ef8e77f03b17562013748b19326b} [  1 ms] [default] [gfdb] [rows:0  ] [txid:3] UPDATE `gf_rotation` SET `delete_at`='2023-01-20 14:28:02' WHERE (`id`=7) AND `delete_at` IS NULL
+2023-01-20 14:28:02.792 [DEBU] {0404ef8e77f03b17562013748b19326b} [  0 ms] [default] [gfdb] [rows:0  ] [txid:3] COMMIT
+2023-01-20 14:28:14.839 [DEBU] {cc10175d7af03b1757201374c37fe57f} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`create_at`,`pic_url`,`update_at`) VALUES(0,'https:xw.com','2023-01-20 14:28:14','https://xw.com','2023-01-20 14:28:14') 
+2023-01-20 14:28:15.241 [DEBU] {102411757af03b17582013746a4e0c34} [  2 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`update_at`,`link`,`create_at`,`sort`,`pic_url`) VALUES('2023-01-20 14:28:15','https:xw.com','2023-01-20 14:28:15',0,'https://xw.com') 
+2023-01-20 14:28:21.280 [DEBU] {c4f201dd7bf03b175920137464591118} [  2 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`create_at`,`pic_url`,`update_at`) VALUES(0,'https:xw.com','2023-01-20 14:28:21','https://xw.com','2023-01-20 14:28:21') 
+2023-01-20 14:28:21.657 [DEBU] {8c3d74f37bf03b175a201374181f3d60} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`pic_url`,`create_at`,`sort`,`update_at`,`link`) VALUES('https://xw.com','2023-01-20 14:28:21',0,'2023-01-20 14:28:21','https:xw.com') 
+2023-01-20 14:28:22.025 [DEBU] {948063097cf03b175b2013741ea8fcad} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`create_at`,`pic_url`,`update_at`) VALUES(0,'https:xw.com','2023-01-20 14:28:22','https://xw.com','2023-01-20 14:28:22') 
+2023-01-20 14:28:22.337 [DEBU] {2051031c7cf03b175c2013748a4abc1a} [  3 ms] [default] [gfdb] [rows:1  ] INSERT INTO `gf_rotation`(`sort`,`link`,`create_at`,`pic_url`,`update_at`) VALUES(0,'https:xw.com','2023-01-20 14:28:22','https://xw.com','2023-01-20 14:28:22') 
+2023-01-20 21:45:30.611 [DEBU] {94ce42da56083c174abcce1494d0c3b6} [ 13 ms] [default] [gfdb] [rows:0  ] [txid:1] BEGIN
+2023-01-20 21:45:30.618 [DEBU] {94ce42da56083c174abcce1494d0c3b6} [  6 ms] [default] [gfdb] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 21:45:30.623 [DEBU] {94ce42da56083c174abcce1494d0c3b6} [  4 ms] [default] [gfdb] [rows:1  ] [txid:1] UPDATE `gf_rotation` SET `link`='999999.com',`pic_url`='99999999.com',`update_at`='2023-01-20 21:45:30',`sort`=2 WHERE (`id`=1) AND `delete_at` IS NULL
+2023-01-20 21:45:30.626 [DEBU] {94ce42da56083c174abcce1494d0c3b6} [  3 ms] [default] [gfdb] [rows:0  ] [txid:1] COMMIT
+2023-01-20 21:51:34.390 [DEBU] {68a2c48dab083c171762a8366bdc1fc0} [  3 ms] [default] [gfdb] [rows:0  ] [txid:1] BEGIN
+2023-01-20 21:51:34.395 [DEBU] {68a2c48dab083c171762a8366bdc1fc0} [  3 ms] [default] [gfdb] [rows:7  ] [txid:1] SHOW FULL COLUMNS FROM `gf_rotation`
+2023-01-20 21:51:34.397 [DEBU] {68a2c48dab083c171762a8366bdc1fc0} [  1 ms] [default] [gfdb] [rows:1  ] [txid:1] UPDATE `gf_rotation` SET `update_at`='2023-01-20 21:51:34',`pic_url`='99999999.com',`sort`=2,`link`='999999.com' WHERE (`id`=1) AND `delete_at` IS NULL
+2023-01-20 21:51:34.401 [DEBU] {68a2c48dab083c171762a8366bdc1fc0} [  3 ms] [default] [gfdb] [rows:0  ] [txid:1] COMMIT
